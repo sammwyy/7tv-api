@@ -1,8 +1,11 @@
 {
   "name": "7tv",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "./lib/index.js",
   "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
   "author": {
     "email": "sammwy.dev@gmail.com",
     "name": "Sammwy",
