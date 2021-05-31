@@ -1,0 +1,36 @@
+{
+  "name": "7tv",
+  "version": "0.0.2",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "author": {
+    "email": "sammwy.dev@gmail.com",
+    "name": "Sammwy",
+    "url": "https://twitter.com/sammwy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammwyy/7tv-api.git"
+  },
+  "description": "Unofficial 7TV API Wrapper.",
+  "scripts": {
+    "babel": "./node_modules/.bin/babel",
+    "build": "yarn clean && babel ./src --out-dir ./lib",
+    "clean": "rimraf ./lib",
+    "test": "jest"
+  },
+  "dependencies": {
+    "core-js": "^3.13.1",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "jest": "^27.0.3",
+    "rimraf": "^3.0.2"
+  }
+}
