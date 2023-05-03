@@ -14,62 +14,31 @@ npm install 7tv
 
 ## 📚 Usage
 
-### Get user data
+### Get user data and emotes
 
-```javascript
-const SevenTV = require("../lib");
-const api = SevenTV();
+```typescript
+import SevenTV from "7tv";
 
-async function test () {
-    const user = await api.fetchUser("username_here");
-    console.log(user); // Returns User (Class)
-}
+SevenTV.getTwitchUser('280803646')
+    .then(console.log);
+// Returns Connection interface,
 ```
 
-### Get user emotes
+## 📦 Interfaces
 
-```javascript
-const SevenTV = require("../lib");
-const api = SevenTV();
-
-async function test () {
-    const emotes = await api.fetchUserEmotes("username_here");
-    console.log(emotes); // Returns array of Emote (Class)
-}
-```
-
-## 📦 Classes
-
-### Emote class
+### Collection
 
 ```json
 {
-    "id": String,
-    "name": String,
-    "owner_id": String,
-    "visibility": Number,
-    "tags": [String],
-    "height": [Number],
-    "width": [Number]
-}
-```
-
-### User class
-
-```json
-{
-    "id": String,
-    "description": String,
-    "editor_ids": [String],
-    "display_name": String,
-    "twitch_id": String,
-    "profile_image_url": String,
-    "banned": Boolean,
-    "role": {
-        "name": String,
-        "color": String,
-        "position": Number
-    }
+  "id": string,
+  "platform": "DISCORD" | "TWITCH" | "YOUTUBE",
+  "username": string,
+  "display_name": string,
+  "linked_at": number,
+  "emote_capacity": number,
+  "emote_set_id": number,
+  "emote_set": EmoteSet,
+  "user"?: User,
 }
 ```
 
