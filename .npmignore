@@ -1,17 +1,37 @@
-#tests
+# Logs
+logs
+*.log
+npm-debug.log*
+docs
+
+# dotfiles
+.DS_Store
+.babelrc
+.eslintrc.json
+.husky
+
+# Dependencies
+node_modules
+
+# Intermediate files
+.tmp
+types.js
+
+# Secrets
+.env
+
+# Sources
+*.md
+*.txt
+src
 test
-coverage
-
-#build tools
+script
+fixtures
+examples
+rollup.config.js
 .travis.yml
-.jenkins.yml
-.codeclimate.yml
-
-#linters
-.jscsrc
-.jshintrc
-.eslintrc*
-
-#editor settings
-.idea
-.editorconfig
+schema.json
+secrets.ejson
+service.yml
+shipit.yml
+yarn.lock
