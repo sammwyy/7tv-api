@@ -1,3 +1,4 @@
+import EmoteHost from "./EmoteHost";
 import EmoteState from "./EmoteState";
 import UserProfile from "./UserProfile";
 
@@ -10,4 +11,5 @@ export default interface EmoteData {
     listed: boolean;
     animated: boolean;
     owner: UserProfile;
+    host: EmoteHost;
 }

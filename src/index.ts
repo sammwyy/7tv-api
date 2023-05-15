@@ -1,6 +1,7 @@
 import fetch from 'isomorphic-unfetch';
 
 import Connection from './entities/Connection';
+import Emote from './entities/Emote';
 
 interface APIResponse {
   data: APIError | unknown;
@@ -43,6 +44,11 @@ export class SevenTVClient {
     } else {
       throw new Error((data as APIError).error);
     }
+  }
+
+  async getEmotes(userID: string): Promise<Emote[]> {
+    const user = await this.getTwitchUser(userID);
+    return user.emote_set.emotes || [];
   }
 }
 

@@ -5,6 +5,6 @@ export default interface Emote {
     name: string;
     flags: number;
     timestamp: number;
-    actor_id: boolean;
+    actor_id: string | null;
     data: EmoteData;
 }
