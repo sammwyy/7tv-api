@@ -3,11 +3,13 @@
   "description": "Unofficial 7TV API Wrapper.",
   "version": "0.1.2",
   "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js"
+    }
+  },
   "typings": "lib/index.d.ts",
-  "files": [
-    "lib",
-    "src"
-  ],
+  "files": ["lib", "src"],
   "license": "MIT",
   "author": "sammwy",
   "scripts": {
@@ -53,11 +55,5 @@
   "bugs": {
     "url": "https://github.com/sammwyy/7tv-api/issues"
   },
-  "keywords": [
-    "7tv",
-    "7tv-client",
-    "7tv-api",
-    "twitch",
-    "twitch-emotes"
-  ]
+  "keywords": ["7tv", "7tv-client", "7tv-api", "twitch", "twitch-emotes"]
 }
